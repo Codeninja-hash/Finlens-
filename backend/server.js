@@ -81,6 +81,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'operational', timestamp: new Date().toISOString() });
 });
 
-app.listen(PORT, () => {
-  console.log(`[FinLens Backend] Online at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`[FinLens Backend] Online on port ${PORT}`);
 });
